@@ -1,8 +1,13 @@
 ﻿using System;
 
-public class Employee
+namespace BethanysPieShopHRM
 {
-	public Employee()
-	{
-	}
+    /// <summary>
+    /// This class represents an employee.
+    /// </summary>
+
+    internal class Employee
+    {
+        
+    }
 }
