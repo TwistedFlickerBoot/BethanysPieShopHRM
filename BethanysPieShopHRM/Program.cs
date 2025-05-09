@@ -30,6 +30,7 @@
             george.PerformWork(8);
             
             var receivedWageGeorge = george.ReceiveWage();
+
         }
     }
 }
