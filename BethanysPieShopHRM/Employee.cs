@@ -19,24 +19,37 @@ namespace BethanysPieShopHRM
         public DateTime birthDay;
         
         const int minimalHoursWorkedUnit = 1;
+        
+        public Employee(string first, string last, string em, DateTime bd) : this(first, last, em, bd, 0)
+        {
+        }
 
+        public Employee(string first, string last, string em, DateTime bd, double rate)
+        {
+            firstName = first;
+            lastName = last;
+            email = em;
+            birthDay = bd;
+            hourlyRate = rate;
+        }
+        
         public void PerformWork()
         {
             numberOfHoursWorked++;
-            console.writeLine($"{firstName} {lastName} has worked for {numberOfHoursWorked} hour(s)!");
+            Console.WriteLine($"{firstName} {lastName} has worked for {numberOfHoursWorked} hour(s)!");
         }
 
         public void PerformWork(int numberOfHours)
         {
             numberOfHoursWorked += numberOfHours;
-            console.writeLine($"{firstName} {lastName} has worked for {numberOfHoursWorked} hour(s)!");
+            Console.WriteLine($"{firstName} {lastName} has worked for {numberOfHoursWorked} hour(s)!");
         }
 
         public double ReceiveWage(bool resetHours = true)
         {
             wage = numberOfHoursWorked * hourlyRate;
             
-            console.writeLine($"{firstName} {lastName} has received a wage of {wage:C} for {numberOfHoursWorked} hour(s) of work!");
+            Console.WriteLine($"{firstName} {lastName} has received a wage of {wage:C} for {numberOfHoursWorked} hour(s) of work!");
             if (resetHours)
                 numberOfHoursWorked = 0;
             return wage;
