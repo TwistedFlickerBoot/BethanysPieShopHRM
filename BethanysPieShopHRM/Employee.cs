@@ -17,6 +17,8 @@ namespace BethanysPieShopHRM
         public double hourlyRate;
 
         public DateTime birthDay;
+        
+        const int minimalHoursWorkedUnit = 1;
 
         public void PerformWork()
         {
