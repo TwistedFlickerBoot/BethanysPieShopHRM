@@ -31,6 +31,12 @@
             
             var receivedWageGeorge = george.ReceiveWage();
 
+            george.PerformWork(8);
+            int minimumBonus = 100;
+            int bonusTax = 0;
+            int receivedBonus = george.CalculateBonus(minimumBonus);
+            Console.WriteLine($"The minimum bonus is {minimumBonus} and {george.firstName} has received a bonus of {receivedBonus}");
+            
         }
     }
 }
